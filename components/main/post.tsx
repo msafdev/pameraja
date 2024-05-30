@@ -74,7 +74,7 @@ const Post = async ({
             {title}
           </h4>
         </Link>
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 bg-muted px-2 py-1 rounded">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
           <p className="text-muted-foreground font-mono text-xs lg:text-sm line-clamp-1">
             /{channel} - {formatTimeDifference(new Date(created_at))}
           </p>
