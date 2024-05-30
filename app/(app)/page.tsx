@@ -26,6 +26,13 @@ export default async function Page({
       .order("upvoted", { ascending: false });
     posts = data || [];
     error = fetchError;
+  } else if (query === "old") {
+    const { data, error: fetchError } = await supabase
+      .from("post")
+      .select("*")
+      .order("created_at", { ascending: true });
+    posts = data || [];
+    error = fetchError;
   } else {
     const { data, error: fetchError } = await supabase
       .from("post")
@@ -37,7 +44,7 @@ export default async function Page({
   }
 
   return (
-    <div className="flex flex-col gap-y-4 md:gap-y-6 lg:gap-y-8 px-4 md:px-6 lg:px-8 py-4 md:py-6 lg:py-8">
+    <div className="flex flex-col gap-y-4 px-4 md:px-6 lg:px-8 py-4 md:py-6 lg:py-8">
       {posts &&
         posts.map((post, index) => (
           <Post
