@@ -25,27 +25,27 @@ const sidebarItems = [
       {
         name: "All",
         icon: (
-          <Sparkle className="text-muted-foreground group-hover:text-yellow-400 group-hover:fill-yellow-400 w-3.5 h-3.5" />
+          <Sparkle className="text-muted-foreground anim group-hover:fill-[#facc15] group-hover:text-[#facc15] w-3.5 h-3.5" />
         ),
-        color: "yellow-400",
+        color: "#facc15",
         query: "all",
         fill: true,
       },
       {
         name: "Hot",
         icon: (
-          <Flame className="text-muted-foreground group-hover:text-red-500 group-hover:fill-red-500 w-3.5 h-3.5" />
+          <Flame className="text-muted-foreground anim group-hover:fill-[#ef4444] group-hover:text-[#ef4444] w-3.5 h-3.5" />
         ),
-        color: "red-500",
+        color: "#ef4444",
         query: "hot",
         fill: true,
       },
       {
         name: "Old",
         icon: (
-          <FolderClock className="text-muted-foreground group-hover:text-emerald-500 w-3.5 h-3.5" />
+          <FolderClock className="text-muted-foreground anim group-hover:text-[#10b981] w-3.5 h-3.5" />
         ),
-        color: "emerald-500",
+        color: "#10b981",
         query: "old",
         fill: false,
       },
@@ -57,45 +57,45 @@ const sidebarItems = [
       {
         name: "Coding",
         icon: (
-          <Code className="text-muted-foreground group-hover:text-blue-600 w-3.5 h-3.5" />
+          <Code className="text-muted-foreground anim group-hover:text-[#0284c7] w-3.5 h-3.5" />
         ),
-        color: "blue-600",
+        color: "#0284c7",
         query: "code",
         fill: false,
       },
       {
         name: "Design",
         icon: (
-          <Palette className="text-muted-foreground group-hover:text-pink-600 w-3.5 h-3.5" />
+          <Palette className="text-muted-foreground anim group-hover:text-[#e11d48] w-3.5 h-3.5" />
         ),
-        color: "pink-600",
+        color: "#e11d48",
         query: "design",
         fill: false,
       },
       {
         name: "Product",
         icon: (
-          <Package className="text-muted-foreground group-hover:text-amber-700 w-3.5 h-3.5" />
+          <Package className="text-muted-foreground anim group-hover:text-[#b45309] w-3.5 h-3.5" />
         ),
-        color: "amber-700",
+        color: "#b45309",
         query: "product",
         fill: false,
       },
       {
         name: "Idea",
         icon: (
-          <Lightbulb className="text-muted-foreground group-hover:text-amber-400 w-3.5 h-3.5" />
+          <Lightbulb className="text-muted-foreground anim group-hover:text-[#facc15] w-3.5 h-3.5" />
         ),
-        color: "amber-400",
+        color: "#facc15",
         query: "idea",
         fill: false,
       },
       {
         name: "Discuss",
         icon: (
-          <MessageSquareText className="text-muted-foreground group-hover:text-sky-500 w-3.5 h-3.5" />
+          <MessageSquareText className="text-muted-foreground anim group-hover:text-[#0ea5e9] w-3.5 h-3.5" />
         ),
-        color: "sky-500",
+        color: "#0ea5e9",
         query: "discuss",
         fill: false,
       },
@@ -116,9 +116,8 @@ const Sidebar = () => {
           </h3>
           <div className="flex flex-col">
             {item.links.map((link, index) => (
-              <Suspense>
+              <Suspense key={index}>
                 <Link
-                  key={index}
                   href={{
                     pathname: "/",
                     query: { channel: link.query },

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const Channel = ({
@@ -21,10 +21,11 @@ const Channel = ({
   query: string;
 }) => {
   const searchParams = useSearchParams();
+  const pathname = usePathname();
 
   const search = searchParams.get("channel") || "all";
 
-  const isActive = search === query;
+  const isActive = search === query && pathname === "/";
 
   return (
     <div
@@ -35,9 +36,8 @@ const Channel = ({
     >
       {icon &&
         React.cloneElement(icon as React.ReactElement, {
-          className: `group-hover:text-${color} w-3.5 h-3.5 group-hover:fill-${
-            fill && color
-          } ${isActive ? `text-${color} fill-${fill && color}` : "text-muted-foreground"}`,
+          fill: fill && isActive ? `${color}` : `transparent`,
+          stroke: isActive ? `${color}` : "currentColor",
         })}
       <p
         className={`text-sm font-medium anim group-hover:text-foreground ${
