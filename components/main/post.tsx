@@ -42,7 +42,7 @@ const Post = async ({
     const secondsInYear = secondsInDay * 365;
 
     if (diffInSeconds < secondsInHour) {
-      return "Less than an hour ago by";
+      return "0 hour ago by";
     } else if (diffInSeconds < secondsInDay) {
       const hours = Math.floor(diffInSeconds / secondsInHour);
       return `${hours} hour${hours !== 1 ? "s" : ""} ago by`;
