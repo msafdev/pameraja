@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 
 import Channel from "../main/channel";
@@ -116,23 +116,25 @@ const Sidebar = () => {
           </h3>
           <div className="flex flex-col">
             {item.links.map((link, index) => (
-              <Link
-                key={index}
-                href={{
-                  pathname: "/",
-                  query: { channel: link.query },
-                }}
-                aria-label={`Go to ${link.name}`}
-              >
-                <Channel
+              <Suspense>
+                <Link
                   key={index}
-                  name={link.name}
-                  icon={link.icon}
-                  color={link.color}
-                  query={link.query}
-                  fill={link.fill}
-                />
-              </Link>
+                  href={{
+                    pathname: "/",
+                    query: { channel: link.query },
+                  }}
+                  aria-label={`Go to ${link.name}`}
+                >
+                  <Channel
+                    key={index}
+                    name={link.name}
+                    icon={link.icon}
+                    color={link.color}
+                    query={link.query}
+                    fill={link.fill}
+                  />
+                </Link>
+              </Suspense>
             ))}
           </div>
         </div>
