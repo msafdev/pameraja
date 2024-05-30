@@ -23,7 +23,7 @@ export default async function Page({
     const { data, error: fetchError } = await supabase
       .from("post")
       .select("*")
-      .order("upvoted", { ascending: false });
+      .order("upvoted", { ascending: true });
     posts = data || [];
     error = fetchError;
   } else if (query === "old") {
