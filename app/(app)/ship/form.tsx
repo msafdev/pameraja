@@ -45,13 +45,11 @@ const Form = () => {
     // Handle response
     if (response && response.error) {
       toast({
-        title: "Error",
-        description: response.error,
+        title: "Something went wrong! Please try again.",
       });
     } else if (response.data) {
       toast({
-        title: "Post sent!",
-        description: response.data,
+        title: "Successfully shipped! 🚀",
       });
 
       // Reset form if successful

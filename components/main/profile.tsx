@@ -1,19 +1,25 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { createClient, createAdminClient } from "@/utils/supabase/server";
 
-const Profile = async () => {
+const Profile = async ({ className }: { className?: string }) => {
   const supabase = createClient();
   const { data: user, error } = await supabase.auth.getUser();
 
   if (error) {
     console.error(error);
     return null;
-  };
+  }
 
   return (
-    <div className="flex gap-x-3 items-center group cursor-pointer">
+    <div
+      className={cn(
+        "flex gap-x-3 items-center group cursor-pointer",
+        className
+      )}
+    >
       {user && user.user && (
         <>
           <Avatar className="w-7 h-7">

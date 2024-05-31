@@ -4,8 +4,6 @@ import Link from "next/link";
 import Channel from "../main/channel";
 import Auth from "./auth";
 
-import Icon from "@/public/icon.svg";
-
 import {
   Code,
   Flame,
@@ -16,7 +14,8 @@ import {
   Palette,
   Sparkle,
 } from "lucide-react";
-import Image from "next/image";
+
+import Profile from "../main/profile";
 
 const sidebarItems = [
   {
@@ -82,16 +81,7 @@ const sidebarItems = [
         fill: false,
       },
       {
-        name: "Idea",
-        icon: (
-          <Lightbulb className="text-muted-foreground anim group-hover:text-[#facc15] w-3.5 h-3.5" />
-        ),
-        color: "#facc15",
-        query: "idea",
-        fill: false,
-      },
-      {
-        name: "Discuss",
+        name: "Article",
         icon: (
           <MessageSquareText className="text-muted-foreground anim group-hover:text-[#0ea5e9] w-3.5 h-3.5" />
         ),
@@ -105,10 +95,8 @@ const sidebarItems = [
 
 const Sidebar = () => {
   return (
-    <aside className="h-[100svh] hidden md:flex flex-col py-4 border-r gap-y-4 anim bg-background w-64">
-      <div className="flex pad-x anim mb-4">
-        <Image src={Icon} alt="Logo" width={40} height={40} priority />
-      </div>
+    <aside className="h-[100svh] hidden md:flex flex-col py-4 border-r gap-y-4 anim bg-background w-64 overflow-auto">
+      <Profile className="pad-l py-2.5" />
       {sidebarItems.map((item, index) => (
         <div key={index} className="flex flex-col gap-y-3">
           <h3 className="font-mono font-semibold text-lg pad-l anim">
