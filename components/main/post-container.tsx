@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 
 import { createClient } from "@/utils/supabase/server";
 import Post from "./post";
