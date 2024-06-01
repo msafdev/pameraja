@@ -89,9 +89,12 @@ const Post = async ({
                   {author.user.user_metadata.name[0]}
                 </AvatarFallback>
               </Avatar>
-              <p className="text-foreground font-mono text-xs lg:text-sm hover:underline underline-offset-2 cursor-pointer">
+              <Link
+                href={`/profile/${author.user.id}`}
+                className="text-foreground font-mono text-xs lg:text-sm hover:underline underline-offset-2 cursor-pointer"
+              >
                 @{author.user.user_metadata.preferred_username}
-              </p>
+              </Link>
             </div>
           )}
         </div>

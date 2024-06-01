@@ -1,6 +1,6 @@
 import PostContainer from "@/components/main/post-container";
 
-export default async function Page({
+export default function Page({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined };

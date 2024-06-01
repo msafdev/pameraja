@@ -1,6 +1,8 @@
 import React, { Suspense } from "react";
 
+import { cn } from "@/lib/utils";
 import { createClient } from "@/utils/supabase/server";
+
 import Post from "./post";
 import PostLoading from "../post-loading";
 
@@ -14,7 +16,15 @@ type PostType = {
   upvoted?: string[] | null;
 };
 
-const PostContainer = async ({ query }: { query: string | string[] }) => {
+const PostContainer = async ({
+  query,
+  author_id,
+  className,
+}: {
+  query?: string | string[];
+  author_id?: string;
+  className?: string;
+}) => {
   const supabase = createClient();
 
   const fetchData = async () => {
@@ -22,7 +32,15 @@ const PostContainer = async ({ query }: { query: string | string[] }) => {
     let error = null;
 
     try {
-      if (query === "all") {
+      if (author_id) {
+        const { data, error: fetchError } = await supabase
+          .from("post")
+          .select("*")
+          .eq("author_id", author_id)
+          .order("created_at", { ascending: false });
+        if (fetchError) throw fetchError;
+        posts = data || [];
+      } else if (query === "all") {
         const { data, error: fetchError } = await supabase
           .from("post")
           .select("*")
@@ -63,7 +81,7 @@ const PostContainer = async ({ query }: { query: string | string[] }) => {
   const { posts, error } = await fetchData();
 
   return (
-    <div className="flex flex-col gap-y-4 w-full h-full">
+    <div className={cn("flex flex-col gap-y-3 w-full h-full", className)}>
       <Suspense fallback={<PostLoading />}>
         {posts && posts.length > 0 ? (
           posts.map((post, index) => (
