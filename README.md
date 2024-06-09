@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![Vercel Deploy](https://deploy-badge.vercel.app/vercel/pameraja)](pameraja.vercel.app)
+[![License](https://img.shields.io/github/license/msafdev/pameraja)](https://github.com/msafdev/pameraja/blob/main/LICENSE.txt)
+[![Issues](https://img.shields.io/github/issues/msafdev/pameraja)](https://github.com/msafdev/pameraja/issues)
+[![GitHub Repo stars](https://img.shields.io/github/stars/msafdev/pameraja?style=flat&color=yellow)](https://github.com/msafdev/pameraja/stargazers)
 
-## Getting Started
+## 🍿 Pamer Aja
 
-First, run the development server:
+<div align="center">
+  <img src="https://raw.githubusercontent.com/msafdev/pameraja/26b540d149d2c405a593027806b7fbddc9dea3cd/public/icon.svg" alt="Pamer Aja Logo" width="100" />
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+You can use this project to show off your coding project, design portfolio, a blog post, or an online discussion. It's completely free and open-sourced. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔗 [PamerAja](https://pameraja.vercel.app)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🚀 Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To use this website, you don't need to install anything. Just open the website and start using it.
 
-## Learn More
+### 🚦 To Do
 
-To learn more about Next.js, take a look at the following resources:
+- [x] Add feature/see-profile
+- [ ] Add feature/edit-profile
+- [ ] Add feature/search
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📝 Contribute
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+If you want to contribute to this project, you can fork this repository and make a pull request.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Don't forget to leave a ⭐️
