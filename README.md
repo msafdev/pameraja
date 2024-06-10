@@ -3,7 +3,7 @@
 [![Issues](https://img.shields.io/github/issues/msafdev/pameraja)](https://github.com/msafdev/pameraja/issues)
 [![GitHub Repo stars](https://img.shields.io/github/stars/msafdev/pameraja?style=flat&color=yellow)](https://github.com/msafdev/pameraja/stargazers)
 
-## 🍿 Pamer Aja
+## 🔮 Pamer Aja
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/msafdev/pameraja/26b540d149d2c405a593027806b7fbddc9dea3cd/public/icon.svg" alt="Pamer Aja Logo" width="100" />
