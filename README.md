@@ -1,4 +1,4 @@
-[![Vercel Deploy](https://deploy-badge.vercel.app/vercel/pameraja)](pameraja.vercel.app)
+[![Vercel Deploy](https://deploy-badge.vercel.app/vercel/pameraja)](https://pameraja.vercel.app)
 [![License](https://img.shields.io/github/license/msafdev/pameraja)](https://github.com/msafdev/pameraja/blob/main/LICENSE.txt)
 [![Issues](https://img.shields.io/github/issues/msafdev/pameraja)](https://github.com/msafdev/pameraja/issues)
 [![GitHub Repo stars](https://img.shields.io/github/stars/msafdev/pameraja?style=flat&color=yellow)](https://github.com/msafdev/pameraja/stargazers)
