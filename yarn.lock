@@ -1052,10 +1052,10 @@ jose@^4.14.4:
   resolved "https://registry.yarnpkg.com/jose/-/jose-4.15.5.tgz#6475d0f467ecd3c630a1b5dadd2735a7288df706"
   integrity sha512-jc7BFxgKPKi94uOvEmzlSWFFe2+vASyXaKUpdQKatWAESU2MWjDfFf0fdfc83CDKcA5QecabZeNLyfhe3yKNkg==
 
-jotai@^2.8.2:
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/jotai/-/jotai-2.8.2.tgz#daa4333716868675c95c3b0b90d587768717ff31"
-  integrity sha512-AU+EU82YqP94izfbGYQQL3oa/06gmn+Ijf/CKx0QybAURtbqh2e4N6zA2fxeIh0JEUgASF6z5IhagJ8NicR95A==
+jotai@^2.10.4:
+  version "2.10.4"
+  resolved "https://registry.yarnpkg.com/jotai/-/jotai-2.10.4.tgz#635f499c0fd0202f78c4d4115a71880f915ffdbd"
+  integrity sha512-/T4ofyMSkAybEs2OvR8S4HACa+/ASUEPLz86SUjFXJqU9RdJKLvZDJrag398suvHC5CR0+Cs4P5m/gtVcryzlw==
 
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
